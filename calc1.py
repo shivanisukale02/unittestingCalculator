@@ -2,6 +2,15 @@ import calc
 import unittest
 
 class Calculator(unittest.TestCase):
+    def setUp(self):
+        self.a=34
+        self.b=50
+        print("setUp called")
+    def tearDown(self):
+        self.a=0
+        self.b=0
+        print("teardown called")
+
     def test_add1(self):
         a=3
         b=6
